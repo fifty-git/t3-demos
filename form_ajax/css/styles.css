@@ -1,0 +1,20 @@
+
+.wrapper {
+	width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+	text-align: center;
+	background-color: #CCC;
+}
+
+.error {
+	color: red;
+	font-size: 80%;
+	display: block;
+}
+
+.setErrorStyle {
+	padding: 3px;
+	border: 2px solid red;
+	background-color: #FFFF99;
+}

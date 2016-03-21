@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>T3 Demo 3</title>
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>T3 Demo 3</h1>
+      <div class="widget-one" data-module="m_form">
+        <form class="widget-one-form" method="post">
+        <p>First Name: <input type="text" req='true' name="fname" value="" data-type="form-input" placeholder="required"> </p>
+        <p>Last Name: <input type="text" req='true' name="lname" value="" data-type="form-input" placeholder="required"> </p>
+        <p>Email: <input type="email" req='true' name="user-email" value="" data-type="form-input" placeholder="required"></p>
+        <p><input type="button" name="" value="Submit" data-type="submit-btn" ></p>
+        </form>
+        <p id="message"></p>
+        <p id="message2"></p>
+      </div>
+    </div>
+
+
+    <script src="../js/jquery-1.12.1.min.js"></script>
+    <script src="../js/t3-jquery.js"></script>
+    <script src="../js/lib/services/utility-services.js"></script>
+    <script src="js/modules/m_form.js"></script>
+    <script src="js/behaviors/b_form-validation.js"></script>
+    <script>
+      $( document ).ready(function() {
+        Box.Application.init({
+          debug: true
+        });
+      });
+    </script>
+  </body>
+</html>
