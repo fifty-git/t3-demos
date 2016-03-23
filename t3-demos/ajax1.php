@@ -1,15 +1,18 @@
 <?php
 
+require_once($_SERVER['DOCUMENT_ROOT']."/includes/ShoppingEngine/Model/CustomerModel.php");
+
 if($_POST['formValues']) {
 
   $postArray = json_decode(stripslashes($_POST['formValues']), true);
+  
+  $customerModel = new CustomerModel();
+  $customerId = $postArray['data'];
+  
+  $response = $customerModel->getCustomer($customerId);
 
-  $firstName = $postArray['firstName'];
-  $lastName = $postArray['lastName'];
-  $userEmail = $postArray['userEmail'];
-
-  $response = "<p><strong>First:</strong> $firstName - <strong>Last:</strong> $lastName - <strong>Email:</strong> $userEmail</p>";
-  echo $response;
+  echo json_encode($response);
+  
 }
 else {
   error_log("FAIL");
